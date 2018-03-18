@@ -4,18 +4,19 @@
 import React from 'react';
 import {Component} from 'react';
 import {Layout, Menu, Icon} from 'antd';
+import FrontDesk from './FrontDesk';
+import {Switch, Route, Link} from 'react-router-dom';
 import 'antd/lib/layout/style/css';
 import 'antd/lib/menu/style/css';
 import 'antd/lib/icon/style/css';
 const {Header, Content, Footer, Sider} = Layout;
 
+
 class Home extends Component {
     render(){
         return (
             <Layout>
-                {/*<Layout>
-                    <Header style={{background: '#fff', padding: 0, textAlign: 'right'}}></Header>
-                </Layout>*/}
+
                 <Sider
                     breakpoint="md"
                     collapsedWidth="0"
@@ -24,7 +25,7 @@ class Home extends Component {
                     }}
                 >
 
-                    <div className="logo" style={{height:65, background: '#fff'}}/>
+                    <div className="logo"/>
                     <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
                         <Menu.Item key="1">
 
@@ -91,6 +92,20 @@ class Home extends Component {
 
                     </Menu>
                 </Sider>
+                <Layout>
+                    <Header style={{background: '#fff', padding: 0, textAlign: 'right', paddingRight: '20px'}}></Header>
+                    <Content style={{margin: '24px 16px 0'}}>
+                        <div style={{padding: 24, background: '#fff', minHeight: 500}}>
+                            <Switch>
+                                <Route exact path="/" component={FrontDesk}/>
+                                <Route path="/frontdesk" component={FrontDesk}/>
+                            </Switch>
+                        </div>
+                    </Content>
+                    <Footer style={{textAlign: 'center'}}>
+                        Workflow Design By YXL ©2018
+                    </Footer>
+                </Layout>
 
             </Layout>
         );
