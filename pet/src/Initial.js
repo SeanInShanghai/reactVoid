@@ -25,10 +25,35 @@ class Initial extends Component {
         this.props.history.push('/home');
     }
 
+    handleClick1(e) {
+        e.preventDefault()
+        this.props.history.push('/home');
+    }
+
+    handleClick2(e) {
+        e.preventDefault()
+        this.props.history.push('/home');
+    }
+
+    anotherFunction(e) {
+        e.preventDefault()
+        this.props.history.push('/home');
+    }
+
     render(){
         return(
             <div>
                 <button onClick={this.handleClick}>
+                    Redirect!!!
+                </button>
+
+
+                <button onClick={this.anotherFunction()}>
+                    Redirect!!!
+                </button>
+
+
+                <button onClick={this.handleClick2}>
                     Redirect!!!
                 </button>
             </div>
