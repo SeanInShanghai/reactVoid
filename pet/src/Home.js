@@ -18,6 +18,7 @@ import OperationRoom from './pages/OperationRoom';
 import PathologyAnalysisRoom from './pages/PathologyAnalysisRoom';
 import PharmacyRoom from './pages/PharmacyRoom';
 import SpecialConsulitingRoom from './pages/SpecialConsultingRoom';
+import Test from './pages/Test';
 import {Switch, Route, Link} from 'react-router-dom';
 import 'antd/lib/layout/style/css';
 import 'antd/lib/menu/style/css';
@@ -40,6 +41,7 @@ class Home extends Component {
 
                     <div className="logo"/>
                     <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
+
                         <Menu.Item key="1">
                             <Link to="/frontdesk">
                                 <Icon type="bars"/>
@@ -124,6 +126,12 @@ class Home extends Component {
                                 <span className="nav-text">病理剖析室</span>
                             </Link>
                         </Menu.Item>
+                        <Menu.Item key="15">
+                            <Link to="/test">
+                                <Icon type="bars"/>
+                                <span className="nav-text">Test</span>
+                            </Link>
+                        </Menu.Item>
 
                     </Menu>
                 </Sider>
@@ -133,6 +141,7 @@ class Home extends Component {
                         <div style={{padding: 24, background: '#fff', minHeight: 500}}>
                             <Switch>
                                 <Route exact path="/" component={FrontDesk}/>
+                                <Route path="/test" component={Test}/>
                                 <Route path="/frontdesk" component={FrontDesk}/>
                                 <Route path="/archivesroom" component={ArchivesRoom}/>
                                 <Route path="/consulting" component={ConsultingRoom}/>

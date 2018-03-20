@@ -48,14 +48,14 @@ class Initial extends Component {
                 </button>
 
 
-                <button onClick={this.anotherFunction()}>
+{/*                <button onClick={this.anotherFunction()}>
                     Redirect!!!
                 </button>
 
 
                 <button onClick={this.handleClick2}>
                     Redirect!!!
-                </button>
+                </button>*/}
             </div>
         );
     }

@@ -9,10 +9,11 @@ import {Switch, Route, Link} from 'react-router-dom';
 ReactDOM.render(
     <HashRouter>
         {/*<Initial />*/}
-        <div>
+{/*        <div>
             <Route exact path="/" component={Initial} />
             <Route path="/home" component={Home} />
-        </div>
+        </div>*/}
+        <Home/>
     </HashRouter>
     ,
     document.getElementById('root'));
