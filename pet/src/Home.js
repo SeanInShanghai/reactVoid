@@ -18,12 +18,16 @@ import OperationRoom from './pages/OperationRoom';
 import PathologyAnalysisRoom from './pages/PathologyAnalysisRoom';
 import PharmacyRoom from './pages/PharmacyRoom';
 import SpecialConsulitingRoom from './pages/SpecialConsultingRoom';
-import Test from './pages/Test';
+import Test from './pages/FrontDesk';
 import {Switch, Route, Link} from 'react-router-dom';
 import 'antd/lib/layout/style/css';
 import 'antd/lib/menu/style/css';
-import 'antd/lib/icon/style/css';
+import './Home.css';
+require('./pages/css/style.css');
+require('./pages/css/slider.css');
+// import 'antd/lib/icon/style/css';
 const {Header, Content, Footer, Sider} = Layout;
+
 
 
 class Home extends Component {
@@ -37,111 +41,108 @@ class Home extends Component {
                     onCollapse={(collapsed, type) => {
                         console.log(collapsed, type);
                     }}
-                >
+                    style={{textAlign:'center', height:'100%', backgroundColor:'#fff'}}>
 
-                    <div className="logo"/>
-                    <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
+                    <div className="logo" style={{height:165.56, width:200, backgroundColor:'#65A360'}}/>
+                    <div className="logo" style={{height:70, width:200, backgroundColor:'#232323', marginTop:'0px'}}/>
+                    <Menu theme="light" mode="inline" defaultSelectedKeys={['1']} >
 
-                        <Menu.Item key="1">
-                            <Link to="/frontdesk">
-                                <Icon type="bars"/>
+                        <Menu.Item key="1" className="Menu-item">
+                            <Link to="/frontdesk" class="Menu-link">
                                 <span className="nav-text">前台</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="2">
-                            <Link to="/archivesroom">
-                                <Icon type="frown-o"/>
+                        <Menu.Item key="2" className="Menu-item">
+                            <Link to="/archivesroom" class="Menu-link">
                                 <span className="nav-text">档案室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="3">
-                            <Link to="/consulting">
-                                <Icon type="smile" />
+                        <Menu.Item key="3" className="Menu-item">
+                            <Link to="/consulting" class="Menu-link">
                                 <span className="nav-text">诊室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="4">
-                            <Link to="/immunity">
-                                <Icon type="smile" />
+                        <Menu.Item key="4" className="Menu-item">
+                            <Link to="/immunity" class="Menu-link">
                                 <span className="nav-text">免疫室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="5">
-                            <Link to="/laboratory">
-                                <Icon type="smile" />
+                        <Menu.Item key="5" className="Menu-item">
+                            <Link to="/laboratory" class="Menu-link">
                                 <span className="nav-text">化验室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="6">
-                            <Link to="/affect">
-                                <Icon type="smile" />
+                        <Menu.Item key="6" className="Menu-item">
+                            <Link to="/affect" class="Menu-link">
                                 <span className="nav-text">影响室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="7">
-                            <Link to="/specialconsulting">
-                                <Icon type="smile" />
+                        <Menu.Item key="7" className="Menu-item">
+                            <Link to="/specialconsulting" class="Menu-link">
                                 <span className="nav-text">专科检查室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="8">
-                            <Link to="/dispose">
-                                <Icon type="smile" />
+                        <Menu.Item key="8" className="Menu-item">
+                            <Link to="/dispose" class="Menu-link">
                                 <span className="nav-text">处置室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="9">
-                            <Link to="/pharmacy">
-                                <Icon type="smile" />
+                        <Menu.Item key="9" className="Menu-item">
+                            <Link to="/pharmacy" class="Menu-link">
                                 <span className="nav-text">药房</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="10">
-                            <Link to="/injection">
-                                <Icon type="smile" />
+                        <Menu.Item key="10" className="Menu-item">
+                            <Link to="/injection" class="Menu-link">
                                 <span className="nav-text">注射室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="11">
-                            <Link to="/operationprepare">
-                                <Icon type="smile" />
+                        <Menu.Item key="11" className="Menu-item">
+                            <Link to="/operationprepare" class="Menu-link">
                                 <span className="nav-text">手术准备室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="12">
-                            <Link to="/operation">
-                                <Icon type="smile" />
+                        <Menu.Item key="12" className="Menu-item">
+                            <Link to="/operation" class="Menu-link">
                                 <span className="nav-text">手术室</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="13">
-                            <Link to="/inpatient">
-                                <Icon type="smile" />
+                        <Menu.Item key="13" className="Menu-item">
+                            <Link to="/inpatient" class="Menu-link">
                                 <span className="nav-text">住院部</span>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item key="14">
-                            <Link to="/pathologyanalysis">
-                                <Icon type="smile" />
+                        <Menu.Item key="14" className="Menu-item">
+                            <Link to="/pathologyanalysis" class="Menu-link">
                                 <span className="nav-text">病理剖析室</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key="15">
-                            <Link to="/test">
-                                <Icon type="bars"/>
-                                <span className="nav-text">Test</span>
                             </Link>
                         </Menu.Item>
 
                     </Menu>
                 </Sider>
                 <Layout>
-                    <Header style={{background: '#fff', padding: 0, textAlign: 'right', paddingRight: '20px'}}></Header>
-                    <Content style={{margin: '24px 16px 0'}}>
-                        <div style={{padding: 24, background: '#fff', minHeight: 500}}>
+                    {/*<Header style={{background: '#fff', padding: 0, textAlign: 'right', paddingRight: '20px'}}></Header>*/}
+                    <div class="header" style={{marginTop:'2px', index:100}}>
+                        <div class="wrap">
+                            <div class="header-top">
+                                <div class="logo">
+                                    <img src={require('./pages/images/logo.png')} alt=""/>
+                                </div>
+                                <div class="cart">
+                                    <div class="span6 header-sidebar" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-4">
+                                        <div><img src={require('./pages/images/footprint.png')} alt="" /></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <Content >
+                        <div>
                             <Switch>
                                 <Route exact path="/" component={FrontDesk}/>
-                                <Route path="/test" component={Test}/>
                                 <Route path="/frontdesk" component={FrontDesk}/>
                                 <Route path="/archivesroom" component={ArchivesRoom}/>
                                 <Route path="/consulting" component={ConsultingRoom}/>

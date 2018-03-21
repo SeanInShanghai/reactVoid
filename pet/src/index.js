@@ -5,7 +5,6 @@ import Home from './Home';
 import Initial from './Initial';
 import {HashRouter} from 'react-router-dom';
 import {Switch, Route, Link} from 'react-router-dom';
-
 ReactDOM.render(
     <HashRouter>
         {/*<Initial />*/}
@@ -18,3 +17,8 @@ ReactDOM.render(
     ,
     document.getElementById('root'));
 // registerServiceWorker();
+
+// ReactDOM.render(
+//     <Test/>
+//     ,
+//     document.getElementById('root'));
