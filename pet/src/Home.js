@@ -33,6 +33,27 @@ const {Header, Content, Footer, Sider} = Layout;
 class Home extends Component {
     render(){
         return (
+        <Layout>
+            <Header className="header" style={{backgroundColor:'#65A360', height:'180px'}}>
+                <div className="logo" />
+                <div class="header" style={{marginTop:'2px', index:100}}>
+                    <div class="wrap">
+                        <div class="header-top">
+                            <div class="logo">
+                                <img src={require('./pages/images/logo.png')} alt=""/>
+                            </div>
+                            <div class="cart">
+                                <div class="span6 header-sidebar" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-4">
+                                    <div><img src={require('./pages/images/footprint.png')} alt="" /></div>
+
+                                </div>
+
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </Header>
             <Layout>
 
                 <Sider
@@ -43,7 +64,6 @@ class Home extends Component {
                     }}
                     style={{textAlign:'center', height:'100%', backgroundColor:'#fff'}}>
 
-                    <div className="logo" style={{height:165.56, width:200, backgroundColor:'#65A360'}}/>
                     <div className="logo" style={{height:70, width:200, backgroundColor:'#232323', marginTop:'0px'}}/>
                     <Menu theme="light" mode="inline" defaultSelectedKeys={['1']} >
 
@@ -122,23 +142,7 @@ class Home extends Component {
                 </Sider>
                 <Layout>
                     {/*<Header style={{background: '#fff', padding: 0, textAlign: 'right', paddingRight: '20px'}}></Header>*/}
-                    <div class="header" style={{marginTop:'2px', index:100}}>
-                        <div class="wrap">
-                            <div class="header-top">
-                                <div class="logo">
-                                    <img src={require('./pages/images/logo.png')} alt=""/>
-                                </div>
-                                <div class="cart">
-                                    <div class="span6 header-sidebar" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-4">
-                                        <div><img src={require('./pages/images/footprint.png')} alt="" /></div>
 
-                                    </div>
-
-                                </div>
-                                <div class="clear"></div>
-                            </div>
-                        </div>
-                    </div>
                     <Content >
                         <div>
                             <Switch>
@@ -166,6 +170,7 @@ class Home extends Component {
                 </Layout>
 
             </Layout>
+        </Layout>
         );
     }
 }
