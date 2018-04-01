@@ -18,7 +18,10 @@ import OperationRoom from './pages/OperationRoom';
 import PathologyAnalysisRoom from './pages/PathologyAnalysisRoom';
 import PharmacyRoom from './pages/PharmacyRoom';
 import SpecialConsulitingRoom from './pages/SpecialConsultingRoom';
+import RouterPages from './RounterPages';
+
 import Test from './pages/FrontDesk';
+import MyHeader from './CurHeader';
 import {Switch, Route, Link} from 'react-router-dom';
 import 'antd/lib/layout/style/css';
 import 'antd/lib/menu/style/css';
@@ -34,26 +37,7 @@ class Home extends Component {
     render(){
         return (
         <Layout>
-            <Header className="header" style={{backgroundColor:'#65A360', height:'180px'}}>
-                <div className="logo" />
-                <div class="header" style={{marginTop:'2px', index:100}}>
-                    <div class="wrap">
-                        <div class="header-top">
-                            <div class="logo">
-                                <img src={require('./pages/images/logo.png')} alt=""/>
-                            </div>
-                            <div class="cart">
-                                <div class="span6 header-sidebar" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-4">
-                                    <div><img src={require('./pages/images/footprint.png')} alt="" /></div>
-
-                                </div>
-
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                </div>
-            </Header>
+            <MyHeader />
             <Layout>
 
                 <Sider
@@ -64,76 +48,66 @@ class Home extends Component {
                     }}
                     style={{textAlign:'center', height:'100%', backgroundColor:'#fff'}}>
 
-                    <div className="logo" style={{height:70, width:200, backgroundColor:'#232323', marginTop:'0px'}}/>
+                    <div className="logo" />
                     <Menu theme="light" mode="inline" defaultSelectedKeys={['1']} >
 
-                        <Menu.Item key="1" className="Menu-item">
-                            <Link to="/frontdesk" class="Menu-link">
-                                <span className="nav-text">前台</span>
-                            </Link>
-                        </Menu.Item>
-                        <Menu.Item key="2" className="Menu-item">
-                            <Link to="/archivesroom" class="Menu-link">
-                                <span className="nav-text">档案室</span>
-                            </Link>
-                        </Menu.Item>
                         <Menu.Item key="3" className="Menu-item">
-                            <Link to="/consulting" class="Menu-link">
+                            <Link to="/home3/consulting" class="Menu-link">
                                 <span className="nav-text">诊室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="4" className="Menu-item">
-                            <Link to="/immunity" class="Menu-link">
+                            <Link to="/home3/immunity" class="Menu-link">
                                 <span className="nav-text">免疫室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="5" className="Menu-item">
-                            <Link to="/laboratory" class="Menu-link">
+                            <Link to="/home3/laboratory" class="Menu-link">
                                 <span className="nav-text">化验室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="6" className="Menu-item">
-                            <Link to="/affect" class="Menu-link">
+                            <Link to="/home3/affect" class="Menu-link">
                                 <span className="nav-text">影响室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="7" className="Menu-item">
-                            <Link to="/specialconsulting" class="Menu-link">
+                            <Link to="/home3/specialconsulting" class="Menu-link">
                                 <span className="nav-text">专科检查室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="8" className="Menu-item">
-                            <Link to="/dispose" class="Menu-link">
+                            <Link to="/home3/dispose" class="Menu-link">
                                 <span className="nav-text">处置室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="9" className="Menu-item">
-                            <Link to="/pharmacy" class="Menu-link">
+                            <Link to="/home3/pharmacy" class="Menu-link">
                                 <span className="nav-text">药房</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="10" className="Menu-item">
-                            <Link to="/injection" class="Menu-link">
+                            <Link to="/home3/injection" class="Menu-link">
                                 <span className="nav-text">注射室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="11" className="Menu-item">
-                            <Link to="/operationprepare" class="Menu-link">
+                            <Link to="/home3/operationprepare" class="Menu-link">
                                 <span className="nav-text">手术准备室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="12" className="Menu-item">
-                            <Link to="/operation" class="Menu-link">
+                            <Link to="/home3/operation" class="Menu-link">
                                 <span className="nav-text">手术室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="13" className="Menu-item">
-                            <Link to="/inpatient" class="Menu-link">
+                            <Link to="/home3/inpatient" class="Menu-link">
                                 <span className="nav-text">住院部</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="14" className="Menu-item">
-                            <Link to="/pathologyanalysis" class="Menu-link">
+                            <Link to="/home3/pathologyanalysis" class="Menu-link">
                                 <span className="nav-text">病理剖析室</span>
                             </Link>
                         </Menu.Item>
@@ -147,21 +121,22 @@ class Home extends Component {
                         <div>
                             <Switch>
                                 <Route exact path="/" component={FrontDesk}/>
-                                <Route path="/frontdesk" component={FrontDesk}/>
-                                <Route path="/archivesroom" component={ArchivesRoom}/>
-                                <Route path="/consulting" component={ConsultingRoom}/>
-                                <Route path="/immunity" component={ImmunityRoom}/>
-                                <Route path="/laboratory" component={LaboratoryRoom}/>
-                                <Route path="/affect" component={AffectRoom}/>
-                                <Route path="/specialconsulting" component={SpecialConsulitingRoom}/>
-                                <Route path="/dispose" component={DisposeRoom}/>
-                                <Route path="/pharmacy" component={PharmacyRoom}/>
-                                <Route path="/injection" component={InjectionRoom}/>
-                                <Route path="/operationprepare" component={OperationPrepareRoom}/>
-                                <Route path="/operation" component={OperationRoom}/>
-                                <Route path="/inpatient" component={InpatientRoom}/>
-                                <Route path="/pathologyanalysis" component={PathologyAnalysisRoom}/>
+                                <Route path="/home3/frontdesk" component={FrontDesk}/>
+                                <Route path="/home3/archivesroom" component={ArchivesRoom}/>
+                                <Route path="/home3/consulting" component={ConsultingRoom}/>
+                                <Route path="/home3/immunity" component={ImmunityRoom}/>
+                                <Route path="/home3/laboratory" component={LaboratoryRoom}/>
+                                <Route path="/home3/affect" component={AffectRoom}/>
+                                <Route path="/home3/specialconsulting" component={SpecialConsulitingRoom}/>
+                                <Route path="/home3/dispose" component={DisposeRoom}/>
+                                <Route path="/home3/pharmacy" component={PharmacyRoom}/>
+                                <Route path="/home3/injection" component={InjectionRoom}/>
+                                <Route path="/home3/operationprepare" component={OperationPrepareRoom}/>
+                                <Route path="/home3/operation" component={OperationRoom}/>
+                                <Route path="/home3/inpatient" component={InpatientRoom}/>
+                                <Route path="/home3/pathologyanalysis" component={PathologyAnalysisRoom}/>
                             </Switch>
+
                         </div>
                     </Content>
                     <Footer style={{textAlign: 'center'}}>
@@ -170,6 +145,7 @@ class Home extends Component {
                 </Layout>
 
             </Layout>
+
         </Layout>
         );
     }

@@ -54,17 +54,8 @@ class Test extends Component {
                     </div>
                 </div>*/}
 
-                <div class="header-bottom">
-                    <div class="wrap">
-                        <div id='cssmenu'>
 
-                        </div>
-
-                        <div class="clear"></div>
-                    </div>
-                </div>
-
-                <div>
+                <div style={{marginTop:'3px'}}>
                     <Carousel autoplay>
                         <div><h3><img style={{width:'100%'}} src={require('./images/banner1.jpg')}/></h3></div>
                         <div><h3><img style={{width:'100%'}} src={require('./images/banner2.jpg')}/></h3></div>

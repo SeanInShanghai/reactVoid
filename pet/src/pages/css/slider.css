@@ -3,13 +3,16 @@
 }
 .theme-default .nivoSlider {
 	position:relative;
-	background:#fff  no-repeat 50% 50%;
+	/*background:#fff url(../images/loading.gif) no-repeat 50% 50%; */
+	
 }
 .theme-default .nivoSlider img {
 	position:absolute;
 	top:0px;
 	left:0px;
 	display:none;
+	
+	
 }
 .theme-default .nivoSlider a {
 	border:0;
@@ -130,7 +133,7 @@
 }
 .nivo-prevNav {
 	left:0px;
-
+	/*background:url(../images/prev.png) no-repeat;*/
 }
 .nivo-nextNav {
 	right:0px;

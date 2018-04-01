@@ -6,7 +6,7 @@ import {Component} from 'react';
 import {View} from 'react';
 import {Switch, Route, Link} from 'react-router-dom';
 import { withRouter } from 'react-router-dom'
-import Home from './Home';
+import Home from './learn_flow';
 //初始页面
 
 class Initial extends Component {
