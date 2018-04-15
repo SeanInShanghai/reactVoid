@@ -8,12 +8,19 @@ import {Layout, Menu, Icon} from 'antd';
 import { Row, Col } from 'antd';
 import {Switch, Route, Link} from 'react-router-dom';
 import { Tag } from 'antd';
+import axios from 'axios';
+import $ from 'jquery';
 import './Test.css';
 import MyHeader from '../CurHeader';
 import './CaseStudy.css';
 const {Header, Content, Footer, Sider} = Layout;
 
-
+// const host = "http://localhost:8011/getIllnessCases";
+// const host = "http://localhost/VisPethos/php/getIllnessCases.php";
+const host = "http://localhost/VisPethos/php/getCases.php";
+const head = {
+    headers: { 'Content-Type': 'application/json' }
+};
 const illness = [
     {'key':1, 'name':'传染病', 'cases':['犬瘟热', '犬细小病毒', '犬传染性肝炎', '犬冠状病毒', '猫泛白细胞减少症', '猫病毒性病气管炎', '皮肤真菌感染']},
     {'key':2, 'name':'寄生虫病', 'cases':['蛔虫病', '钩虫病', '绦虫病', '球虫病', '疥螨虫病', '蚤病']},
@@ -24,12 +31,52 @@ const illness = [
 
 //病例学习
 class CaseStudy extends Component {
+    //
+    // data: illness,
+    // label: illness[0]['cases']
     constructor(props) {
         super(props);
         this.state = {
-            data: illness,
-            label: illness[1]['cases']
+            data: [],
+            label: []
         };
+    }
+
+    componentDidMount() {
+
+        var user = localStorage.getItem('user');
+        if(user == null){
+            this.props.history.push("/index");
+        }
+
+        this.fetch();
+    }
+
+    fetch() {
+        axios({
+            method: 'get',
+            url: `${host}`,
+        }).then( response => {
+            var data = response.data;
+
+            // var str = '[{"id":1,"name":"Test1"},{"id":2,"name":"Test2"}]';
+
+            // const dataObj = JSON.parse(str);
+            // alert(dataObj[0].id);
+            // alert(response.json());
+            // var repDatan = JSON.parse(response.data);
+            // alert(repDatan);
+            const repData = response.data;
+
+
+            this.setState({data: repData});
+            this.setState({label: repData[0]['cases']});
+        }).catch(error => {
+            alert("error");
+            this.setState({data: [
+                {'key':1, 'name':'传染病', 'cases':['犬瘟热', '犬细小病毒', '犬传染性肝炎', '犬冠状病毒', '猫泛白细胞减少症', '猫病毒性病气管炎', '皮肤真菌感染']}]});
+            this.setState({label: this.state.data[0]['cases']});
+        });
     }
 
 
@@ -80,11 +127,14 @@ class CaseStudy extends Component {
                         </Menu>
                     </Sider>
                     <Layout>
-                        <div style={{marginTop:'10px'}}>
-                            <Row style={{textAlign:'center'}}>
+                        <div style={{marginTop:'10px', marginLeft:'10px', marginRight:'10px'}}>
+                            <Row style={{textAlign:'center'}} gutter={16}>
                                 {
+
                                     this.state.label.map(function (item) {
-                                        return <Col style={{backgroundColor:'#00a0e9b3'}} xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>{item}</Col>
+                                        var idInfo = "/caseDescription/"+item.key;
+                                        // return <Col style={{backgroundColor:'#00a0e9b3'}} xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>{item}</Col>
+                                        return <Col style={{marginBottom:'10px'}} className="gutter-row" span={8}> <Link to={idInfo} style={{color:'#fff'}}><div className="gutter-box" style={{backgroundColor:"#4f9c6ca6"}}>{item.name}</div></Link> </Col>
                                     })
                                 }
 

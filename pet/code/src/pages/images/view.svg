@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11-flat-20030114.dtd">
+<!-- Created by SVGDeveloper 1.0 -->
+<svg width="900" height="820" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="none" stroke="#0000FF">
+
+<defs>
+<linearGradient id="linearGradient">
+<stop offset="1%" stop-color="rgb(168,178,216)" stop-opacity="1" />
+<stop offset="18%" stop-color="rgb(0,0,128)" stop-opacity="1" />
+<stop offset="48%" stop-color="rgb(214,218,238)" stop-opacity="1" />
+<stop offset="83%" stop-color="rgb(192,192,255)" stop-opacity="1" />
+<stop offset="99%" stop-color="rgb(0,0,128)" stop-opacity="1" />
+</linearGradient>
+</defs>
+<path id="zhushe" d="M9 10L158 10L158 110L9 110L9 10Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="zhushe" x="43" y="54" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF">
+	注射室</text>
+<path id="chuzhi" d="M169 11L298 11L298 110L169 110L169 11Z" fill="#CCCCCC" stroke="none" stroke-opacity="1" xmlns="http://www.w3.org/2000/svg" />
+<text id="chuzhi" x="192" y="51" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" stroke="#0000FF" fill-opacity="0" baseline-shift="baseline">
+	处置室</text>
+<path id="shoushu" d="M378 10L578 10L578 109L378 109L378 10Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="shoushu" x="395" y="44" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+	手术室</text>
+<path id="dangan" d="M170 120L319 120L319 219L170 219L170 120Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="dangan" x="199" y="165" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+档案室</text>
+<path id="zhunbei" d="M309 10L368 10L368 109L309 109L309 10Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="zhunbei" x="316" y="44" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+手术准备室</text>
+<path id="yaofang" d="M169 230L318 230L318 329L169 329L169 230Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="yaofang" x="203" y="276" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+药房</text>
+<path id="zhengshi" d="M169 340L320 340L320 640L169 640L169 340Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="zhengshi" x="208" y="493" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+诊室</text>
+<path id="huayan" d="M329 119L579 119L579 270L329 270L329 119Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="huayan" x="402" y="185" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+化验室</text>
+<path id="mianyi" d="M8 650L208 650L208 810L8 810L8 650Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="mianyi" x="47" y="730" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+免疫室</text>
+<path id="bingpou" d="M218 650L418 650L418 810L218 810L218 650Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="bingpou" x="253" y="734" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+病理剖检室</text>
+<path id="zhuanke" d="M428 651L628 651L629 809L429 809L428 651Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="zhuanke" x="463" y="737" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+专科检查室</text>
+<path id="qiantai" d="M8 120L158 120L158 641L8 641L8 120Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="qiantai" x="48" y="314" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+前台</text>
+<path id="yingxiang" d="M588 79L718 79L718 558L590 558L588 79Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="yingxiang" x="619" y="278" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+影像室</text>
+<path id="zhuyuan" d="M589 10L888 10L888 809L639 809L639 650L729 650L729 71L589 71L589 10Z" fill="#CCCCCC" fill-opacity="1" stroke="none" xmlns="http://www.w3.org/2000/svg" />
+<text id="zhuyuan" x="763" y="274" xml:space="preserve" font-family="Microsoft YaHei UI" font-size="12" fill="none" fill-opacity="0" stroke="#0000FF" baseline-shift="baseline">
+住院部</text>
+</svg>

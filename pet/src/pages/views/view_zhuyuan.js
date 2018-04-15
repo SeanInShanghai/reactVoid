@@ -9,6 +9,12 @@ require('../css/style.css');
 require('../css/slider.css');
 
 class ZhuaYuan extends Component{
+    componentDidMount() {
+        var user = localStorage.getItem('user');
+        if(user == null){
+            this.props.history.push("/index");
+        }
+    }
     render(){
         return(
 

@@ -27,9 +27,15 @@ import Test from './pages/test/test';
 import Home1 from './learn_flow_1';
 import Home2 from './learn_flow_2';
 import Home3 from './learn_flow_3';
+import LoginStorage from './pages/login/loginStorage';
+import LoginCheck from './pages/login/loginCheck';
+import PhpTest from './pages/login/phpTest';
+import Login from './pages/login/login';
+import Register from './pages/login/register';
+import SpecificCase from './pages/SpecificCase';
 // import RounterPages from "./RounterPages";
 // import Switch from "antd/lib/switch/index.d";
-
+import CaseDescription from './pages/CaseDescription';
 ReactDOM.render(
     <HashRouter>
         {/*<Initial />*/}
@@ -42,7 +48,7 @@ ReactDOM.render(
             <Switch>
                 <Route path="/home" component={Home} />
                 <Route path="/view/view" component={View}/>
-                <Route path="/view/binggou" component={Binggou}/>
+                <Route path="/view/bingpou" component={Binggou}/>
                 <Route path="/view/chuzhi" component={Chuzhi}/>
                 <Route path="/view/dangan" component={Dangan}/>
                 <Route path="/view/huayan" component={Huayan}/>
@@ -57,6 +63,7 @@ ReactDOM.render(
                 <Route path="/view/zhushe" component={Zhushe}/>
                 <Route path="/view/zhuyuan" component={Zhuyuan}/>
                 {/*<Route path="/" component={PorIndex}/>*/}
+                {/*<Route exact path="/" component={PorIndex}/>*/}
                 <Route path="/index" component={PorIndex}/>
                 <Route path="/learn" component={Learn}/>
                 <Route path="/test" component={Test}/>
@@ -64,6 +71,13 @@ ReactDOM.render(
                 <Route path="/home1" component={Home1}/>
                 <Route path="/home2" component={Home2}/>
                 <Route path="/home3" component={Home3}/>
+                <Route path="/login" component={Login} />
+                <Route path="/register" component={Register} />
+                <Route path="/phpTest" component={PhpTest} />
+                {/*<Route path="/LoginStorage" component={LoginStorage} />*/}
+                {/*<Route path="/LoginCheck" component={LoginCheck} />*/}
+                <Route path="/caseDescription/:caseId" component={CaseDescription} />
+                <Route path="/specific/:caseId" component={SpecificCase} />
             </Switch>
         </div>
         {/*<CaseStudy/>*/}

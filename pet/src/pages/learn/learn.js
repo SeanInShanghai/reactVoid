@@ -10,17 +10,76 @@ require('../css/slider.css');
 const {Header, Content, Footer, Sider} = Layout;
 
 class Learn extends Component{
+    componentDidMount() {
+        var user = localStorage.getItem('user');
+        if(user == null){
+            this.props.history.push("/index");
+        }
+    }
     render(){
         return(
 
             <Layout>
+
+                <Layout>
+                    {/*<Header className="header" style={{backgroundColor:'#65A360', height:'180px'}}>
+                        <div className="logo" />
+                        <div class="header">
+                            <div class="wrap">
+                                <div class="header-top">
+                                    <div class="logo">
+                                        <img src={require('../images/logo.png')} alt=""/>
+                                    </div>
+                                    <div class="cart">
+                                        <div class="span6 header-sidebar" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-4">
+                                            <div id="text-6" class="visible-all-devices " style={{width:'357.11px', height:'53px'}}>
+                                                <div class="textwidget">
+                                                    <div class="section group" style={{display:'none'}}>
+                                                        <a href="#" class="login-btn">注册</a>
+                                                        <a href="#" class="register-btn">登录</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div><img src={require('../images/footprint.png')} alt="" style={{width:'160px',height:'80px'}} /></div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </Header>*/}
+                    {/*<Header className="header-bottom">
+                        <div class="wrap">
+                            <div id='cssmenu'>
+                                <ul>
+                                    <li class='active'><a href='index.html'><span>首页</span></a></li>
+
+                                    <li class='has-sub'><a href=''><span>业务流程学习</span></a>
+                                        <ul>
+                                            <Link to="/home1"><li class='has-sub'><span>前台</span></li></Link>
+                                            <Link to="/home2"><li class='has-sub'><span>助理</span></li></Link>
+                                            <Link to="/home3"><li class='has-sub'><span>执业兽医师</span></li></Link>
+                                        </ul>
+                                    </li>
+                                    <li><Link to="/casestudy"><span>病例学习</span></Link></li>
+                                </ul>
+                            </div>
+
+                            <div class="clear"></div>
+                        </div>
+                    </Header>*/}
+                </Layout>
+
+                {/*<MyHeader/>*/}
                 <Header className="header" style={{backgroundColor:'#65A360', height:'180px'}}>
                     <div className="logo" />
                     <div class="header">
                         <div class="wrap">
                             <div class="header-top">
                                 <div class="logo">
-                                    <img src={require('../images/logo.png')} alt=""/>
+                                    <Link to="/index"><img src={require('../images/logo.png')} alt=""/></Link>
                                 </div>
                                 <div class="cart">
                                     <div class="span6 header-sidebar" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-4">
@@ -32,7 +91,7 @@ class Learn extends Component{
                                                 </div>
                                             </div>
                                         </div>
-                                        <div><img src={require('../images/footprint.png')} alt="" /></div>
+                                        <div><img style={{width:'auto'}} src={require('../images/footprint.png')} alt="" /></div>
 
                                     </div>
 
@@ -49,7 +108,7 @@ class Learn extends Component{
                             <ul>
                                 <li class='active'><a href='index.html'><span>首页</span></a></li>
 
-                                <li class='has-sub'><a href=''><span>业务流程学习</span></a>
+                                <li class='has-sub'><a href='#/learn'><span>业务流程学习</span></a>
                                     <ul>
                                         <Link to="/home1"><li class='has-sub'><span>前台</span></li></Link>
                                         <Link to="/home2"><li class='has-sub'><span>助理</span></li></Link>
@@ -65,7 +124,7 @@ class Learn extends Component{
                 </div>
 
                 <div class="main">
-                    <div class="content-bottom">
+                    <div class="content-bottom" style={{backgroundColor:'#f0f2f5', width:'100%', marginTop:'1%'}}>
                         <div class="wrap">
                             <div class="section group">
 

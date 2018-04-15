@@ -34,6 +34,12 @@ const {Header, Content, Footer, Sider} = Layout;
 
 
 class Home extends Component {
+    componentDidMount() {
+        var user = localStorage.getItem('user');
+        if(user == null){
+            this.props.history.push("/index");
+        }
+    }
     render(){
         return (
         <Layout>

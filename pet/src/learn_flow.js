@@ -34,6 +34,14 @@ const {Header, Content, Footer, Sider} = Layout;
 
 
 class Home extends Component {
+
+    componentDidMount() {
+        var user = localStorage.getItem('user');
+        if(user == null){
+            this.props.history.push("/index");
+        }
+    }
+
     render(){
         return (
         <Layout>
@@ -78,7 +86,7 @@ class Home extends Component {
                         </Menu.Item>
                         <Menu.Item key="6" className="Menu-item">
                             <Link to="/home/affect" class="Menu-link">
-                                <span className="nav-text">影响室</span>
+                                <span className="nav-text">影像室</span>
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="7" className="Menu-item">
@@ -117,8 +125,8 @@ class Home extends Component {
                             </Link>
                         </Menu.Item>
                         <Menu.Item key="14" className="Menu-item">
-                            <Link to="/pathologyanalysis" class="Menu-link">
-                                <span className="nav-text">病理剖析室</span>
+                            <Link to="/home/pathologyanalysis" class="Menu-link">
+                                <span className="nav-text">病理剖检室</span>
                             </Link>
                         </Menu.Item>
 
@@ -130,7 +138,7 @@ class Home extends Component {
                     <Content >
                         <div>
                             <Switch>
-                                <Route exact path="/" component={FrontDesk}/>
+                                <Route exact path="/home" component={FrontDesk}/>
                                 <Route path="/home/frontdesk" component={FrontDesk}/>
                                 <Route path="/home/archivesroom" component={ArchivesRoom}/>
                                 <Route path="/home/consulting" component={ConsultingRoom}/>

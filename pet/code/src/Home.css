@@ -1,0 +1,26 @@
+#components-layout-demo-responsive .logo {
+    height: 32px;
+    background: #333;
+    border-radius: 6px;
+    margin: 16px;
+}
+.Menu-link{
+    color:white;
+    height: 50px;
+}
+/*.Menu-item{*/
+    /*background: #1DA57A;*/
+/*}*/
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+    background-color:#4f9c6ca6;
+}
+
+.ant-menu-vertical .ant-menu-item:after, .ant-menu-vertical-left .ant-menu-item:after, .ant-menu-vertical-right .ant-menu-item:after, .ant-menu-inline .ant-menu-item:after{
+    /*background-color: #4f9c6ca6;*/
+    border-right: 0px solid #4f9c6ca6;
+}
+
+.nav-text{
+    color: #000000;
+    font-size: 24px;
+}

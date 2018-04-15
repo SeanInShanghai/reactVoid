@@ -4,6 +4,7 @@
 import React from 'react';
 import {Component} from 'react';
 import {Layout, Menu, Icon} from 'antd';
+import {Switch, Route, Link} from 'react-router-dom';
 const {Header, Content, Footer, Sider} = Layout;
 
 class MyHeader extends Component {
@@ -16,7 +17,7 @@ class MyHeader extends Component {
                         <div class="wrap">
                             <div class="header-top">
                                 <div class="logo">
-                                    <img src={require('./pages/images/logo.png')} alt=""/>
+                                    <Link to="/index"><img src={require('./pages/images/logo.png')} alt=""/></Link>
                                 </div>
                                 <div class="cart">
                                     <div class="span6 header-sidebar" data-motopress-type="dynamic-sidebar" data-motopress-sidebar-id="footer-sidebar-4">
@@ -28,7 +29,7 @@ class MyHeader extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div><img src={require('./pages/images/footprint.png')} alt="" /></div>
+                                        <div><img style={{width:'auto'}} src={require('./pages/images/footprint.png')} alt="" /></div>
 
                                     </div>
 
