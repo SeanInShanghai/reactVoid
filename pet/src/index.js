@@ -24,6 +24,7 @@ import Zhuyuan from './pages/views/view_zhuyuan';
 import PorIndex from './ProIndex';
 import Learn from './pages/learn/learn';
 import Test from './pages/test/test';
+import NewTest from './pages/test/newtest';
 import Home1 from './learn_flow_1';
 import Home2 from './learn_flow_2';
 import Home3 from './learn_flow_3';
@@ -33,6 +34,7 @@ import PhpTest from './pages/login/phpTest';
 import Login from './pages/login/login';
 import Register from './pages/login/register';
 import SpecificCase from './pages/SpecificCase';
+import  GetTestId from './pages/test/getTestWithId';
 // import RounterPages from "./RounterPages";
 // import Switch from "antd/lib/switch/index.d";
 import CaseDescription from './pages/CaseDescription';
@@ -46,6 +48,7 @@ ReactDOM.render(
         {/*<Home/>*/}
         <div>
             <Switch>
+                <Route exact path="/" component={PorIndex}/>
                 <Route path="/home" component={Home} />
                 <Route path="/view/view" component={View}/>
                 <Route path="/view/bingpou" component={Binggou}/>
@@ -78,6 +81,10 @@ ReactDOM.render(
                 {/*<Route path="/LoginCheck" component={LoginCheck} />*/}
                 <Route path="/caseDescription/:caseId" component={CaseDescription} />
                 <Route path="/specific/:caseId" component={SpecificCase} />
+                <Route path="/newTest/:testId" component={NewTest} />
+                <Route path="/newTest" component={NewTest} />
+                <Route path="/newTest/getTest/:testId" component={GetTestId} />
+                {/*<Route path="/getTest/:testId" component={GetTestId} />*/}
             </Switch>
         </div>
         {/*<CaseStudy/>*/}

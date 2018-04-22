@@ -118,7 +118,7 @@ class Test extends Component {
                         </span>
                     </p>
 
-                    <center><img src={require('../pages/descimg/处置室.jpeg')}/></center>
+                    <center><img src={require('../pages/descimg/前台.jpeg')}/></center>
                 </div>
 
 

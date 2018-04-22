@@ -144,7 +144,7 @@ class Register extends Component{
 
                         </div>
                     </div>
-                    <div class="content-bottom">
+                    <div class="content-bottom" style={{backgroundColor:'#f0f2f5', width:'100%', marginTop:'1%'}}>
                         <div class="wrap">
                             <div class="col span_2_of_3">
                                 <div class="register-form">

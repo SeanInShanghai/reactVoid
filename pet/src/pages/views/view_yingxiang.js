@@ -3,7 +3,7 @@
  */
 import React, {Component} from 'react';
 import {Layout, Menu, Icon} from 'antd';
-import MyHeader from '../../CurHeader';
+import MyHeader from './CurHeader';
 
 require('../css/style.css');
 require('../css/slider.css');

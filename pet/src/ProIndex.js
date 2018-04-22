@@ -108,7 +108,7 @@ class ProIndex extends Component {
                     </Carousel>
                 </div>
                 <div class="main">
-                    <div class="content-top">
+                    <div class="content-top" style={{backgroundColor:"#fff"}}>
                         <div class="wrap">
                             <div class="section group">
                                 <div class="col_1_of_3 span_1_of_3">
@@ -143,7 +143,7 @@ class ProIndex extends Component {
                                                 this.state.showTag ?
                                                     <img src={require('./pages/images/test.png')} alt="" onClick={this.handleImgClick}/>
                                                     :
-                                                    <Link to="/test"><img src={require('./pages/images/test.png')} alt=""/></Link>
+                                                    <Link to="/newTest"><img src={require('./pages/images/test.png')} alt=""/></Link>
                                             }
 
                                         </div>

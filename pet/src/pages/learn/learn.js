@@ -106,7 +106,7 @@ class Learn extends Component{
                     <div class="wrap">
                         <div id='cssmenu'>
                             <ul>
-                                <li class='active'><a href='index.html'><span>首页</span></a></li>
+                                <li class='active'><a href='/#index'><span>首页</span></a></li>
 
                                 <li class='has-sub'><a href='#/learn'><span>业务流程学习</span></a>
                                     <ul>
