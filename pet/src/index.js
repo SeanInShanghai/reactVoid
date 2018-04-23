@@ -38,6 +38,7 @@ import  GetTestId from './pages/test/getTestWithId';
 // import RounterPages from "./RounterPages";
 // import Switch from "antd/lib/switch/index.d";
 import CaseDescription from './pages/CaseDescription';
+import CaseDescriptionNew from './pages/CaseDescriptionNew';
 ReactDOM.render(
     <HashRouter>
         {/*<Initial />*/}
@@ -80,6 +81,7 @@ ReactDOM.render(
                 {/*<Route path="/LoginStorage" component={LoginStorage} />*/}
                 {/*<Route path="/LoginCheck" component={LoginCheck} />*/}
                 <Route path="/caseDescription/:caseId" component={CaseDescription} />
+                <Route path="/caseDescriptionNew/:caseId" component={CaseDescriptionNew} />
                 <Route path="/specific/:caseId" component={SpecificCase} />
                 <Route path="/newTest/:testId" component={NewTest} />
                 <Route path="/newTest" component={NewTest} />

@@ -82,6 +82,7 @@ class CaseStudy extends Component {
 
     handleClick = (e) => {
         console.log('click ', e);
+        // alert(e.key);
         var curData = this.state.data[e.key-1];
         var curLabel = curData.cases;
 
@@ -165,7 +166,7 @@ class CaseStudy extends Component {
                                 {
 
                                     this.state.label.map(function (item) {
-                                        var idInfo = "/caseDescription/"+item.key;
+                                        var idInfo = "/caseDescriptionNew/"+item.key;
                                         // return <Col style={{backgroundColor:'#00a0e9b3'}} xs={{ span: 5, offset: 1 }} lg={{ span: 6, offset: 2 }}>{item}</Col>
                                         return <Col style={{marginBottom:'10px'}} className="gutter-row" span={8}> <Link to={idInfo} style={{color:'#fff'}}><div className="gutter-box" style={{backgroundColor:"#4f9c6ca6"}}>{item.name}</div></Link> </Col>
                                     })

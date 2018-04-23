@@ -111,15 +111,31 @@ class NewTest extends Component{
                             {
                                 this.state.data.map(function(item){
                                     return <SubMenu key={item.illId} title={<span><span style={{color:"#0A0A0A"}}>{item.illName}</span></span>}>
+                                        {/*{
+                                            item.test.map(function (test) {
+                                                    return <div>{test.testName}</div>
+                                                }
 
-                                        <Menu.Item key={item.test[0].testId}>
-                                            {/*{link} = {"/newTest/getTest/"}+{item.test[0].testId}*/}
-                                            <Link to={"/newTest/getTest/" + item.test[0].testId} class="Menu-link" params={{ testId: item.test[0].testId}} ><span style={{color:"#0A0A0A"}}>{item.test[0].testName}</span></Link>
-                                        </Menu.Item>
-                                        <Menu.Item key={item.test[1].testId}>
-                                            {/*{link} = {"/newTest/getTest/"}+{item.test[0].testId}*/}
-                                            <Link to={"/newTest/getTest/" + item.test[1].testId} class="Menu-link" params={{ testId: item.test[1].testId}} ><span style={{color:"#0A0A0A"}}>{item.test[1].testName}</span></Link>
-                                        </Menu.Item>
+                                            )
+                                        }*/}
+                                        {
+                                            item.test.map(function (test) {
+                                                    return  <Menu.Item key={test.testId}>
+                                                        <Link to={"/newTest/getTest/" + test.testId} class="Menu-link" params={{ testId: test.testId}} ><span style={{color:"#0A0A0A"}}>{test.testName}</span></Link>
+                                                    </Menu.Item>
+                                                }
+
+                                            )
+                                        }
+
+                                        {/*<Menu.Item key={item.test[0].testId}>*/}
+                                            {/*/!*{link} = {"/newTest/getTest/"}+{item.test[0].testId}*!/*/}
+                                            {/*<Link to={"/newTest/getTest/" + item.test[0].testId} class="Menu-link" params={{ testId: item.test[0].testId}} ><span style={{color:"#0A0A0A"}}>{item.test[0].testName}</span></Link>*/}
+                                        {/*</Menu.Item>*/}
+                                        {/*<Menu.Item key={item.test[1].testId}>*/}
+                                            {/*/!*{link} = {"/newTest/getTest/"}+{item.test[0].testId}*!/*/}
+                                            {/*<Link to={"/newTest/getTest/" + item.test[1].testId} class="Menu-link" params={{ testId: item.test[1].testId}} ><span style={{color:"#0A0A0A"}}>{item.test[1].testName}</span></Link>*/}
+                                        {/*</Menu.Item>*/}
 
 
                                     </SubMenu>;

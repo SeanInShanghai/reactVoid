@@ -179,7 +179,7 @@ class Home extends Component {
                         </div>
                     </Content>
                     <Footer style={{textAlign: 'center'}}>
-                        Pet Hospital Website Designed By YXL ©2018
+                        Pet Hospital Website Designed By GROUP23 ©2018
                     </Footer>
                 </Layout>
 
